@@ -24,7 +24,7 @@ if st.button('Process', type="primary"):
     with st.spinner('Processing in progress ...'): 
         st.balloons()   
         time.sleep(15)
-        result = llm(input_prompt)
+        result = llm.invoke(input_prompt)
         result = os.linesep.join([s for s in result.splitlines() if s])
 
     
